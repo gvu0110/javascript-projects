@@ -43,3 +43,9 @@ document
   .addEventListener('click', function () {
     message.remove();
   });
+
+const btnScollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+btnScollTo.addEventListener('click', function (event) {
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
