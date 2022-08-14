@@ -29,3 +29,17 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+message.innerHTML =
+  'We use cookies to improve website functionality and analystics. <button class="btn btn--close-cookie">OK</button>';
+
+const header = document.querySelector('.header');
+header.append(message);
+
+document
+  .querySelector('.btn--close-cookie')
+  .addEventListener('click', function () {
+    message.remove();
+  });
